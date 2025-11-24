@@ -1,7 +1,7 @@
 budgie-extras (2.0.0-0ubuntu1) resolute; urgency=medium
 
   * Stable release
-    - wayland compatibility for various applets
+    - wayland compatibility for various applets (LP: #2132292)
     - for X11 applets these become transitional packages
   * switch to budgie gir 3.0 and remove debhelper, libbudgie-plugin0
   * Build with peas-2
