@@ -1,0 +1,4 @@
+remove-on-upgrade /etc/xdg/autostart/shufflerdaemon-autostart.desktop
+remove-on-upgrade /etc/xdg/autostart/shufflergui-autostart.desktop
+remove-on-upgrade /etc/xdg/autostart/layoutspopup-autostart.desktop
+remove-on-upgrade /etc/xdg/autostart/dragsnap-autostart.desktop

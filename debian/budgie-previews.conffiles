@@ -1,0 +1,2 @@
+remove-on-upgrade /etc/xdg/autostart/previews-creator-autostart.desktop
+remove-on-upgrade /etc/xdg/autostart/previews-daemon-autostart.desktop

@@ -1,0 +1,364 @@
+Source: budgie-extras
+Section: misc
+Priority: optional
+Maintainer: David Mohammed <fossfreedom@ubuntu.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ appstream,
+ budgie-core-dev,
+ cmake,
+ gnome-settings-daemon-dev,
+ gobject-introspection,
+ intltool,
+ libappstream-dev,
+ libgdk-pixbuf-2.0-dev,
+ libgee-0.8-dev,
+ libglib2.0-dev (>= 2.56),
+ libgnome-desktop-3-dev,
+ libgranite-dev,
+ libgtk-3-dev,
+ libgtk-layer-shell-dev,
+ libhandy-1-dev,
+ libjson-glib-dev,
+ libkeybinder-3.0-dev,
+ libnm-dev,
+ libnma-dev,
+ libnotify-dev,
+ libpeas-2-dev,
+ libplank-dev,
+ libsoup-3.0-dev,
+ libxfce4windowing-0-dev,
+ meson,
+ pkgconf,
+ pycodestyle,
+ python3,
+ valac,
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Vcs-Browser: https://github.com/UbuntuBudgie/budgie-extras-debian/tree/debian
+Vcs-Git: https://github.com/UbuntuBudgie/budgie-extras-debian -b debian
+Homepage: https://ubuntubudgie.org
+
+Package: budgie-clockworks-applet
+Architecture: any
+Depends:
+ gir1.2-budgie-3.0,
+ gir1.2-glib-2.0,
+ gir1.2-gtk-3.0,
+ gir1.2-libxfce4windowing-0.0,
+ gir1.2-peas-2,
+ python3,
+ python3-cairosvg,
+ python3-gi,
+ python3-pil,
+ python3-svgwrite,
+ ${misc:Depends},
+ ${python3:Depends},
+Description: Applet to display clock across multiple time zones
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The Clockworks applet displays the current time across multiple
+ time zones.
+
+Package: budgie-app-launcher-applet
+Architecture: any
+Depends:
+ gir1.2-budgie-3.0,
+ gir1.2-glib-2.0,
+ gir1.2-gmenu-3.0,
+ gir1.2-gtk-3.0,
+ gir1.2-libxfce4windowing-0.0,
+ gir1.2-peas-2,
+ gnome-menus,
+ python3,
+ python3-gi,
+ ${misc:Depends},
+ ${python3:Depends},
+Description: Applet to provide an alternative means to launch applications
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The app-launcher applet allows the ability to add favorite apps to the
+ panel as well as finding and launching applications.  The list of
+ applications listed can be easily configured to be visible or hidden.
+
+Package: budgie-applications-menu-applet
+Architecture: any
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
+Recommends: switcheroo-control,
+Description: Stylish Applications Menu for Budgie-Desktop
+ Budgie-Desktop is a GTK+ based desktop environment which focuses on
+ simplicity and elegance.  It provides a traditional desktop metaphor
+ based interface utilising customisable panel based menu driven system.
+ Budgie-Desktop is written from scratch utilising many GNOME based
+ sub-systems such as GNOME-Session and Mutter.
+ .
+ The application-menu is a stylish panel applet that displays applications
+ in different views - grid and list. Weblinks typed into the search bar
+ can be opened in your default browser. Applications that have additional
+ desktop options show via a right-click menu. Applications with associated
+ actions show those actions are additional searchable entries.
+ .
+ Variety of options are available including grid sizing and displaying a
+ powerstrip.
+
+Package: budgie-brightness-controller-applet
+Architecture: any
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
+Description: Applet to control the brightness of the screen
+ This is part of a suite of python3 and Vala based applets & mini-apps
+ created for the Budgie Desktop that provide additional user orientated
+ capabilities. These can be used individually or as a set.
+
+Package: budgie-countdown-applet
+Architecture: any
+Depends:
+ gir1.2-budgie-3.0,
+ gir1.2-glib-2.0,
+ gir1.2-gtk-3.0,
+ gir1.2-peas-2,
+ python3,
+ python3-gi,
+ python3-psutil,
+ sound-theme-freedesktop,
+ vorbis-tools,
+ zenity,
+ ${misc:Depends},
+ ${python3:Depends},
+Description: Applet providing a countdown capability on the Budgie Desktop
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The Countdown applet provides the user the ability to start an
+ action when the countdown reaches 0 seconds. Actions include flashing
+ an icon in the panel, opening a notification window, sounding a
+ bell or running a custom command.
+
+Package: budgie-dropby-applet
+Depends: ${gir:Depends}, ${misc:Depends},
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-extras-common
+Architecture: any
+Depends: ${misc:Depends},
+Description: Shared component of budgie-extras applets
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The shared component provides for capabilities that are utilised between
+ budgie-extra applets.
+
+Package: budgie-extras-daemon
+Depends: ${gir:Depends}, ${misc:Depends},
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-fuzzyclock-applet
+Architecture: any
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
+Description: Show the time in a fuzzy way
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ Displays the time in a 'spoken' format such as five past six.
+
+Package: budgie-hotcorners-applet
+Depends: ${gir:Depends}, ${misc:Depends},
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-kangaroo-applet
+Architecture: any
+Depends:
+ gir1.2-budgie-3.0,
+ gir1.2-glib-2.0,
+ gir1.2-gtk-3.0,
+ gir1.2-libxfce4windowing-0.0,
+ gir1.2-peas-2,
+ python3,
+ python3-gi,
+ python3-psutil,
+ xdg-utils,
+ zenity,
+ ${misc:Depends},
+ ${python3:Depends},
+Description: Applet to allow quick file-browsing
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The kangaroo applet allows for quick & easy browsing, across
+ (possibly) many directory layers, without having to do a single mouse
+ click.
+
+Package: budgie-keyboard-autoswitch-applet
+Depends: ${gir:Depends}, ${misc:Depends},
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-network-manager-applet
+Architecture: any
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
+Description: Network Manager Applet for the budgie-desktop
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ This package installs an Network connectivity applet for the
+ budgie-desktop.
+
+Package: budgie-previews
+Depends: ${gir:Depends}, ${misc:Depends},
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-quickchar
+Depends: ${gir:Depends}, ${misc:Depends},
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-quicknote-applet
+Architecture: any
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
+Description: Applet providing simple notes capability for the Budgie Desktop
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The quicknote applet allows a user to record a text based note.
+ The applet supports multiple undo and redo capabilities.
+
+Package: budgie-recentlyused-applet
+Architecture: any
+Depends: budgie-extras-common, xdg-utils, ${misc:Depends}, ${shlibs:Depends},
+Description: Applet displays files recently accessed for the Budgie Desktop
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The recentlyused applet displays the users files that have been opened
+ or created within a configurable period of time.
+
+Package: budgie-rotation-lock-applet
+Depends: ${gir:Depends}, ${misc:Depends},
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-showtime-applet
+Depends: ${gir:Depends}, ${misc:Depends},
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-takeabreak-applet
+Architecture: any
+Depends:
+ gir1.2-budgie-3.0,
+ gir1.2-glib-2.0,
+ gir1.2-gtk-3.0,
+ gir1.2-peas-2,
+ gir1.2-libxfce4windowing-0.0,
+ wlr-randr,
+ python3,
+ python3-gi,
+ x11-xserver-utils,
+ xprintidle,
+ libnotify-bin,
+ ${misc:Depends},
+ ${python3:Depends},
+Description: Applet to prompt when to take-a-break for a set period of time
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The take-a-break applet monitors how long a desktop is being used
+ and at a configurable time period suggests when to take a break
+ from working.
+
+Package: budgie-trash-applet
+Architecture: all
+Section: oldlibs
+Depends: ${misc:Depends},
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-visualspace-applet
+Architecture: all
+Section: oldlibs
+Depends: ${misc:Depends},
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-wallstreet
+Architecture: any
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
+Description: Change wallpaper from a folder on a schedule
+ This is part of a suite of python3 and Vala based applets & mini-apps
+ created for the Budgie Desktop that provide additional user orientated
+ capabilities. These can be used individually or as a set.
+ .
+ Wallstreet allows for a directory of pictures to be shown on
+ a schedule.
+
+Package: budgie-weathershow-applet
+Architecture: any
+Depends: budgie-extras-common, procps, ${misc:Depends}, ${shlibs:Depends},
+Description: Applet to display the weather and forecast
+ This is part of a suite of python3 based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The weathershow applet displays daily and three hourly weather
+ forecasts on both the desktop and a Popover.
+
+Package: budgie-window-shuffler
+Architecture: all
+Section: oldlibs
+Depends: ${misc:Depends},
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-workspace-stopwatch-applet
+Architecture: all
+Section: oldlibs
+Depends: ${misc:Depends},
+Description: transitional package
+ This is a transitional package. It can safely be removed.
+
+Package: budgie-workspace-wallpaper-applet
+Architecture: all
+Section: oldlibs
+Depends: ${misc:Depends},
+Description: transitional package
+ This is a transitional package. It can safely be removed.
