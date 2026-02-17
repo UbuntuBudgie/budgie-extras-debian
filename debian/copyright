@@ -4,12 +4,12 @@ Upstream-Contact: David Mohammed <fossfreedom@ubuntu.com>
 Source: https://github.com/ubuntubudgie/budgie-extras
 
 Files: *
-Copyright: 2017-2022, Ubuntu Budgie Developers
+Copyright: 2017-2026, Ubuntu Budgie Developers
 License: GPL-3+
 
 Files: budgie-wallstreet/data/org.ubuntubudgie.wallstreetcontrol.metainfo.xml.in
  *.metainfo.xml
-Copyright: 2022-2025, Ubuntu Budgie Developers
+Copyright: 2022-2026, Ubuntu Budgie Developers
 License: FSFAP
  Copying and distribution of this file, with or without modification,
  are permitted in any medium without royalty provided the copyright
@@ -54,7 +54,7 @@ License: CC-BY-4.0
       material not subject to the license. This includes other CC-
       licensed material, or material used under an exception or
       limitation to copyright. More considerations for licensors:
- 	wiki.creativecommons.org/Considerations_for_licensors
+    wiki.creativecommons.org/Considerations_for_licensors
  .
       Considerations for the public: By using one of our public
       licenses, a licensor grants the public permission to use the
@@ -71,7 +71,7 @@ License: CC-BY-4.0
       Although not required by our licenses, you are encouraged to
       respect those requests where reasonable. More_considerations
       for the public: 
- 	wiki.creativecommons.org/Considerations_for_licensees
+    wiki.creativecommons.org/Considerations_for_licensees
  .
  =======================================================================
  .
@@ -755,10 +755,6 @@ Files: budgie-applications-menu/applications-menu/src/Widgets/Switcher.vala
 Copyright: 2014, Corentin Noël <tintou@mailoo.org>
   2011, 2012, Giulio Collura
 License: GPL-3+
-
-Files: budgie-applications-menu/applications-menu/src/powerstrip.vala
-Copyright: 2019, Ubuntu Budgie Developers
-License: GPL-2+
 
 Files: budgie-applications-menu/applications-menu/src/synapse-core/*
 Copyright: 2010, Michal Hruby <michal.mhr@gmail.com>

@@ -1,4 +1,4 @@
-budgie-extras (2.1.0-1) unstable; urgency=medium
+budgie-extras (2.1.0-1) experimental; urgency=medium
 
   * Stable release
     - wayland compatibility for various applets
@@ -10,8 +10,15 @@ budgie-extras (2.1.0-1) unstable; urgency=medium
   * add libgtk-layer-shell-dev
   * d/control switch Vcs to budgie-extras-debian with gbp buildpackage
     compatibility
+  * Transition package for showtime and workspace-wallpaper applets
+    These now install their widget equivalents - i.e.
+    budgie-showtime-widget and budgieworkspace-wallpaper-widget
+  * Reinstantiate budgie-extras-daemon to allow previous layouts capability
+    0001-Rejig-budgie-extras-daemon-to-just-support-layouts.patch
+  * d/control change budgie-extras-daemon transitional package back
+    to the Questing binary
 
- -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 17 Feb 2026 18:47:33 +0000
+ -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 17 Feb 2026 18:59:33 +0000
 
 budgie-extras (1.9.0-1) unstable; urgency=medium
 

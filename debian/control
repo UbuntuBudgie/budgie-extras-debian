@@ -36,8 +36,8 @@ Build-Depends:
  valac,
 Standards-Version: 4.7.2
 Rules-Requires-Root: no
-Vcs-Browser: https://github.com/UbuntuBudgie/budgie-extras-debian/tree/debian
-Vcs-Git: https://github.com/UbuntuBudgie/budgie-extras-debian -b debian
+Vcs-Browser: https://github.com/UbuntuBudgie/budgie-extras-debian/tree/debian/latest
+Vcs-Git: https://github.com/UbuntuBudgie/budgie-extras-debian -b debian/latest
 Homepage: https://ubuntubudgie.org
 
 Package: budgie-clockworks-applet
@@ -140,12 +140,35 @@ Description: Applet providing a countdown capability on the Budgie Desktop
  bell or running a custom command.
 
 Package: budgie-dropby-applet
-Depends: ${gir:Depends}, ${misc:Depends},
-Architecture: all
-Priority: optional
-Section: oldlibs
-Description: transitional package
- This is a transitional package. It can safely be removed.
+Architecture: any
+Depends:
+ gir1.2-budgie-1.0,
+ gir1.2-glib-2.0,
+ gir1.2-gtk-3.0,
+ gir1.2-peas-1.0,
+ gir1.2-wnck-3.0,
+ python3,
+ python3-gi,
+ python3-psutil,
+ python3-pyudev,
+ util-linux (>= 2.31.1),
+ wmctrl,
+ zenity,
+ libnotify-bin,
+ ${misc:Depends},
+ ${python3:Depends},
+Description: Applet to popup when a USB device is connected
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The DropBy applet pops up in the panel when connecting a usb device.
+ The applet subsequently offers the option(s) to mount, unmount/eject
+ and in case of a flash drive, to make a local copy of the drive's
+ content. The info shows the free space on the volume.
+ .
+ The applet is context- sensitive, meaning: it only shows its icon in
+ the panel if, and as long as, any usb drive is connected.
 
 Package: budgie-extras-common
 Architecture: any
@@ -159,12 +182,15 @@ Description: Shared component of budgie-extras applets
  budgie-extra applets.
 
 Package: budgie-extras-daemon
-Depends: ${gir:Depends}, ${misc:Depends},
-Architecture: all
-Priority: optional
-Section: oldlibs
-Description: transitional package
- This is a transitional package. It can safely be removed.
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Extras daemon for budgie-extras capabilities
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ Budgie-extras-daemon provides D-Bus functionality
+ for various extras applets and applications.
 
 Package: budgie-fuzzyclock-applet
 Architecture: any
@@ -274,12 +300,26 @@ Description: transitional package
  This is a transitional package. It can safely be removed.
 
 Package: budgie-showtime-applet
-Depends: ${gir:Depends}, ${misc:Depends},
+Depends: budgie-showtime-widget, ${gir:Depends}, ${misc:Depends},
 Architecture: all
 Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
+
+Package: budgie-showtime-widget
+Architecture: any
+Replaces: budgie-showtime-applet,
+Breaks: budgie-showtime-applet (<< 1.9.0-1~),
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends}
+Description: Raven Widget displaying date and time on the Budgie Desktop
+ This is part of a suite of Vala based Raven widgets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The widgets can be used individually or as a set.
+ .
+ The ShowTime widget is a digital desktop clock, showing time and/or
+ date.  Text color of both the displayed time and date can be set
+ separately from the raven widget's menu
 
 Package: budgie-takeabreak-applet
 Architecture: any
@@ -314,11 +354,17 @@ Description: transitional package
  This is a transitional package. It can safely be removed.
 
 Package: budgie-visualspace-applet
-Architecture: all
-Section: oldlibs
-Depends: ${misc:Depends},
-Description: transitional package
- This is a transitional package. It can safely be removed.
+Architecture: any
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends}
+Description: Show and manage windows in workspaces for the Budgie Desktop
+ This is part of a suite of python3 and Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The visualspace applet shows as a stylish compact workspace on the budgie
+ panel.  Choosing windows in the applet popup moves to the workspace
+ where the window is located and gives it focus.
+ The number of Workspace can also be changed though the applet popup.
 
 Package: budgie-wallstreet
 Architecture: any
@@ -359,6 +405,23 @@ Description: transitional package
 Package: budgie-workspace-wallpaper-applet
 Architecture: all
 Section: oldlibs
-Depends: ${misc:Depends},
+Depends: budgie-workspace-wallpaper-widget, ${misc:Depends},
 Description: transitional package
  This is a transitional package. It can safely be removed.
+
+Package: budgie-workspace-wallpaper-widget
+Architecture: any
+Replaces: budgie-workspace-wallpaper-applet,
+Breaks: budgie-workspace-wallpaper-applet (<< 1.9.0-1~),
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends}
+Description: Raven Widget providing per workspace wallpaper
+ This is part of a suite of Vala based Raven widgets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The widgets can be used individually or as a set.
+ .
+ The workspace wallpaper widget shows a different wallpaper on each of
+ the workspaces. Usage is simple: add the widget to Raven and set
+ wallpapers on each of the workspaces in the way you are used to.
+ Turn on and off by opening Raven.
+ The widget will remember what wallpaper was set on each of the
+ workspaces.
