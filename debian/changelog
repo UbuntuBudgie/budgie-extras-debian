@@ -15,8 +15,6 @@ budgie-extras (2.1.0-1) experimental; urgency=medium
     budgie-showtime-widget and budgieworkspace-wallpaper-widget
   * Reinstantiate budgie-extras-daemon to allow previous layouts capability
     0001-Rejig-budgie-extras-daemon-to-just-support-layouts.patch
-  * d/control change budgie-extras-daemon transitional package back
-    to the Questing binary
 
  -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 17 Feb 2026 18:59:33 +0000
 
