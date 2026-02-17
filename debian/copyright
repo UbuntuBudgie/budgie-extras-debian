@@ -706,7 +706,7 @@ License: CC-BY-3.0
     applicable law.
 
 Files: debian/*
-Copyright: 2017-2022, David Mohammed <fossfreedom@ubuntu.com>
+Copyright: 2017-2026, David Mohammed <fossfreedom@ubuntu.com>
 License: GPL-2+
 
 Files: budgie-applications-menu/applications-menu/*

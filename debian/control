@@ -34,7 +34,7 @@ Build-Depends:
  pycodestyle,
  python3,
  valac,
-Standards-Version: 4.7.2
+Standards-Version: 4.7.3
 Rules-Requires-Root: no
 Vcs-Browser: https://github.com/UbuntuBudgie/budgie-extras-debian/tree/debian/latest
 Vcs-Git: https://github.com/UbuntuBudgie/budgie-extras-debian -b debian/latest
@@ -205,7 +205,6 @@ Description: Show the time in a fuzzy way
 Package: budgie-hotcorners-applet
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -237,7 +236,6 @@ Description: Applet to allow quick file-browsing
 Package: budgie-keyboard-autoswitch-applet
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -256,7 +254,6 @@ Description: Network Manager Applet for the budgie-desktop
 Package: budgie-previews
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -264,7 +261,6 @@ Description: transitional package
 Package: budgie-quickchar
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -294,7 +290,6 @@ Description: Applet displays files recently accessed for the Budgie Desktop
 Package: budgie-rotation-lock-applet
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -302,7 +297,6 @@ Description: transitional package
 Package: budgie-showtime-applet
 Depends: budgie-showtime-widget, ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
