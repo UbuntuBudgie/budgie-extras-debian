@@ -1,4 +1,4 @@
-budgie-extras (2.0.0-1) unstable; urgency=medium
+budgie-extras (2.1.0-1) unstable; urgency=medium
 
   * Stable release
     - wayland compatibility for various applets
@@ -11,7 +11,7 @@ budgie-extras (2.0.0-1) unstable; urgency=medium
   * d/control switch Vcs to budgie-extras-debian with gbp buildpackage
     compatibility
 
- -- David Mohammed <fossfreedom@ubuntu.com>  Mon, 10 Nov 2025 19:22:12 +0000
+ -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 17 Feb 2026 18:47:33 +0000
 
 budgie-extras (1.9.0-1) unstable; urgency=medium
 
