@@ -36,13 +36,8 @@ Build-Depends:
  valac,
 Standards-Version: 4.7.3
 Rules-Requires-Root: no
-<<<<<<< HEAD
-Vcs-Browser: https://github.com/UbuntuBudgie/budgie-extras-debian/tree/ubuntu
-Vcs-Git: https://github.com/UbuntuBudgie/budgie-extras-debian -b ubuntu
-=======
-Vcs-Browser: https://github.com/UbuntuBudgie/budgie-extras-debian/tree/debian/latest
-Vcs-Git: https://github.com/UbuntuBudgie/budgie-extras-debian -b debian/latest
->>>>>>> debian/latest
+Vcs-Browser: https://github.com/UbuntuBudgie/budgie-extras-debian/tree/ubuntu/latest
+Vcs-Git: https://github.com/UbuntuBudgie/budgie-extras-debian -b ubuntu/latest
 Homepage: https://ubuntubudgie.org
 
 Package: budgie-clockworks-applet
@@ -152,10 +147,7 @@ Depends:
  gir1.2-gtk-3.0,
  gir1.2-peas-1.0,
  gir1.2-wnck-3.0,
-<<<<<<< HEAD
-=======
  libnotify-bin,
->>>>>>> debian/latest
  python3,
  python3-gi,
  python3-psutil,
@@ -163,10 +155,6 @@ Depends:
  util-linux (>= 2.31.1),
  wmctrl,
  zenity,
-<<<<<<< HEAD
- libnotify-bin,
-=======
->>>>>>> debian/latest
  ${misc:Depends},
  ${python3:Depends},
 Description: Applet to popup when a USB device is connected
@@ -195,11 +183,7 @@ Description: Shared component of budgie-extras applets
 
 Package: budgie-extras-daemon
 Architecture: any
-<<<<<<< HEAD
-Depends: ${misc:Depends}, ${shlibs:Depends}
-=======
 Depends: ${misc:Depends}, ${shlibs:Depends},
->>>>>>> debian/latest
 Description: Extras daemon for budgie-extras capabilities
  This is part of a suite of python3 and Vala based applets for the Budgie
  Desktop that provide additional user orientated capabilities.
@@ -338,11 +322,7 @@ Package: budgie-showtime-widget
 Architecture: any
 Replaces: budgie-showtime-applet,
 Breaks: budgie-showtime-applet (<< 1.9.0-1~),
-<<<<<<< HEAD
-Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends}
-=======
 Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
->>>>>>> debian/latest
 Description: Raven Widget displaying date and time on the Budgie Desktop
  This is part of a suite of Vala based Raven widgets for the Budgie
  Desktop that provide additional user orientated capabilities.
@@ -444,11 +424,7 @@ Package: budgie-workspace-wallpaper-widget
 Architecture: any
 Replaces: budgie-workspace-wallpaper-applet,
 Breaks: budgie-workspace-wallpaper-applet (<< 1.9.0-1~),
-<<<<<<< HEAD
-Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends}
-=======
 Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
->>>>>>> debian/latest
 Description: Raven Widget providing per workspace wallpaper
  This is part of a suite of Vala based Raven widgets for the Budgie
  Desktop that provide additional user orientated capabilities.

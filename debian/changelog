@@ -1,7 +1,7 @@
 budgie-extras (2.2.0-0ubuntu1) resolute; urgency=medium
 
   * New upstream release
-    - FFE Add budgie-screencast-applet (LP: #)
+    - FFE Add budgie-screencast-applet (LP: #2143082)
     - drop all previous patch since it has been incorporated in this
       release
   * Packaging Changes:
