@@ -2,6 +2,8 @@ budgie-extras (2.2.0-1) experimental; urgency=medium
 
   * New upstream release
     - Add budgie-screencast-applet
+    - drop all previous patch since it has been incorporated in this
+      release
   * Packaging Changes:
     d/control add budgie-screencast-applet packaging
 
