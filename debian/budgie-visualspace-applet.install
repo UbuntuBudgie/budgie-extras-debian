@@ -1,5 +1,5 @@
 etc/xdg/autostart/visualspace*.desktop
 usr/lib/*/budgie-desktop/plugins/budgie-visualspace
 usr/share/glib-2.0/schemas/*visualspace*.xml
-usr/share/pixmaps/visualspace*
 usr/share/metainfo/org.ubuntubudgie.visualspace.metainfo.xml
+usr/share/pixmaps/visualspace*

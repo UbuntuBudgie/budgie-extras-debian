@@ -1,4 +1,4 @@
 usr/lib/*/budgie-desktop/plugins/budgie-clockworks
 usr/share/glib-2.0/schemas/*budgie-clockworks*.xml
-usr/share/pixmaps/budgie-clockworks*.svg
 usr/share/metainfo/org.ubuntubudgie.clockworks.metainfo.xml
+usr/share/pixmaps/budgie-clockworks*.svg

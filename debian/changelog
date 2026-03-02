@@ -6,6 +6,8 @@ budgie-extras (2.2.0-1) experimental; urgency=medium
       release
   * Packaging Changes:
     d/control add budgie-screencast-applet packaging
+    wrap-and-sort -bst
+    add news.patch to fix appstream validation errors
 
  -- David Mohammed <fossfreedom@ubuntu.com>  Mon, 02 Mar 2026 19:00:57 +0000
 
