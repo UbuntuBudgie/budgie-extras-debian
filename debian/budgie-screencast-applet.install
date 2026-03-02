@@ -1,0 +1,3 @@
+usr/lib/*/budgie-desktop/plugins/budgie-screencast
+usr/share/glib-2.0/schemas/org.ubuntubudgie.budgie-screencast.gschema.xml
+usr/share/pixmaps/budgie-screencast-symbolic.svg

@@ -3,11 +3,11 @@ Section: misc
 Priority: optional
 Maintainer: David Mohammed <fossfreedom@ubuntu.com>
 Build-Depends:
- debhelper-compat (= 13),
- dh-python,
  appstream,
  budgie-core-dev,
  cmake,
+ debhelper-compat (= 13),
+ dh-python,
  gnome-settings-daemon-dev,
  gobject-introspection,
  intltool,
@@ -34,10 +34,15 @@ Build-Depends:
  pycodestyle,
  python3,
  valac,
-Standards-Version: 4.7.2
+Standards-Version: 4.7.3
 Rules-Requires-Root: no
+<<<<<<< HEAD
 Vcs-Browser: https://github.com/UbuntuBudgie/budgie-extras-debian/tree/ubuntu
 Vcs-Git: https://github.com/UbuntuBudgie/budgie-extras-debian -b ubuntu
+=======
+Vcs-Browser: https://github.com/UbuntuBudgie/budgie-extras-debian/tree/debian/latest
+Vcs-Git: https://github.com/UbuntuBudgie/budgie-extras-debian -b debian/latest
+>>>>>>> debian/latest
 Homepage: https://ubuntubudgie.org
 
 Package: budgie-clockworks-applet
@@ -147,6 +152,10 @@ Depends:
  gir1.2-gtk-3.0,
  gir1.2-peas-1.0,
  gir1.2-wnck-3.0,
+<<<<<<< HEAD
+=======
+ libnotify-bin,
+>>>>>>> debian/latest
  python3,
  python3-gi,
  python3-psutil,
@@ -154,7 +163,10 @@ Depends:
  util-linux (>= 2.31.1),
  wmctrl,
  zenity,
+<<<<<<< HEAD
  libnotify-bin,
+=======
+>>>>>>> debian/latest
  ${misc:Depends},
  ${python3:Depends},
 Description: Applet to popup when a USB device is connected
@@ -183,7 +195,11 @@ Description: Shared component of budgie-extras applets
 
 Package: budgie-extras-daemon
 Architecture: any
+<<<<<<< HEAD
 Depends: ${misc:Depends}, ${shlibs:Depends}
+=======
+Depends: ${misc:Depends}, ${shlibs:Depends},
+>>>>>>> debian/latest
 Description: Extras daemon for budgie-extras capabilities
  This is part of a suite of python3 and Vala based applets for the Budgie
  Desktop that provide additional user orientated capabilities.
@@ -205,7 +221,6 @@ Description: Show the time in a fuzzy way
 Package: budgie-hotcorners-applet
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -237,7 +252,6 @@ Description: Applet to allow quick file-browsing
 Package: budgie-keyboard-autoswitch-applet
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -256,7 +270,6 @@ Description: Network Manager Applet for the budgie-desktop
 Package: budgie-previews
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -264,7 +277,6 @@ Description: transitional package
 Package: budgie-quickchar
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -294,15 +306,30 @@ Description: Applet displays files recently accessed for the Budgie Desktop
 Package: budgie-rotation-lock-applet
 Depends: ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
 
+Package: budgie-screencast-applet
+Architecture: any
+Depends:
+ pulseaudio-utils,
+ slurp,
+ wf-recorder,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Applet to record the whole or parts of a screen
+ This is part of a suite of Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The screencast applet allows both areas and whole screen video recording
+ together with optional audio.  It allows for unlimited recording as well
+ as time-limited recording times plus optional delays in recording.
+
 Package: budgie-showtime-applet
 Depends: budgie-showtime-widget, ${gir:Depends}, ${misc:Depends},
 Architecture: all
-Priority: optional
 Section: oldlibs
 Description: transitional package
  This is a transitional package. It can safely be removed.
@@ -311,7 +338,11 @@ Package: budgie-showtime-widget
 Architecture: any
 Replaces: budgie-showtime-applet,
 Breaks: budgie-showtime-applet (<< 1.9.0-1~),
+<<<<<<< HEAD
 Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends}
+=======
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
+>>>>>>> debian/latest
 Description: Raven Widget displaying date and time on the Budgie Desktop
  This is part of a suite of Vala based Raven widgets for the Budgie
  Desktop that provide additional user orientated capabilities.
@@ -327,14 +358,14 @@ Depends:
  gir1.2-budgie-3.0,
  gir1.2-glib-2.0,
  gir1.2-gtk-3.0,
- gir1.2-peas-2,
  gir1.2-libxfce4windowing-0.0,
- wlr-randr,
+ gir1.2-peas-2,
+ libnotify-bin,
  python3,
  python3-gi,
+ wlr-randr,
  x11-xserver-utils,
  xprintidle,
- libnotify-bin,
  ${misc:Depends},
  ${python3:Depends},
 Description: Applet to prompt when to take-a-break for a set period of time
@@ -355,7 +386,7 @@ Description: transitional package
 
 Package: budgie-visualspace-applet
 Architecture: any
-Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends}
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
 Description: Show and manage windows in workspaces for the Budgie Desktop
  This is part of a suite of python3 and Vala based applets for the Budgie
  Desktop that provide additional user orientated capabilities.
@@ -413,7 +444,11 @@ Package: budgie-workspace-wallpaper-widget
 Architecture: any
 Replaces: budgie-workspace-wallpaper-applet,
 Breaks: budgie-workspace-wallpaper-applet (<< 1.9.0-1~),
+<<<<<<< HEAD
 Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends}
+=======
+Depends: budgie-extras-common, ${misc:Depends}, ${shlibs:Depends},
+>>>>>>> debian/latest
 Description: Raven Widget providing per workspace wallpaper
  This is part of a suite of Vala based Raven widgets for the Budgie
  Desktop that provide additional user orientated capabilities.

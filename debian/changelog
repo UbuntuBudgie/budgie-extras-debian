@@ -1,3 +1,16 @@
+budgie-extras (2.2.0-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release
+    - FFE Add budgie-screencast-applet (LP: #)
+    - drop all previous patch since it has been incorporated in this
+      release
+  * Packaging Changes:
+    d/control add budgie-screencast-applet packaging
+    wrap-and-sort -bst
+    add news.patch to fix appstream validation errors
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Mon, 02 Mar 2026 19:00:57 +0000
+
 budgie-extras (2.1.0-0ubuntu2) resolute; urgency=medium
 
   * Reinstantiate budgie-extras-daemon to allow previous layouts capability
@@ -7,7 +20,7 @@ budgie-extras (2.1.0-0ubuntu2) resolute; urgency=medium
 
  -- David Mohammed <fossfreedom@ubuntu.com>  Sun, 08 Feb 2026 19:44:37 +0000
 
-budgie-extras (2.1.0-0ubuntu1) resolute; urgency=medium
+budgie-extras (2.1.0-1) experimental; urgency=medium
 
   * Stable release
     - wayland compatibility for more applets
@@ -23,15 +36,22 @@ budgie-extras (2.0.0-0ubuntu1) resolute; urgency=medium
   * Stable release
     - wayland compatibility for various applets (LP: #2132292)
     - for X11 applets these become transitional packages
+    - hotcorners has become a transitional package (closes #1092933)
   * switch to budgie gir 3.0 and remove debhelper, libbudgie-plugin0
+    (closes #1120138)
   * Build with peas-2
   * Use multiarch location for installs not hard-coded paths
   * remove conffiles via package.conffiles with remove-on-upgrade
   * add libgtk-layer-shell-dev
   * d/control switch Vcs to budgie-extras-debian with gbp buildpackage
     compatibility
+  * Transition package for showtime and workspace-wallpaper applets
+    These now install their widget equivalents - i.e.
+    budgie-showtime-widget and budgieworkspace-wallpaper-widget
+  * Reinstantiate budgie-extras-daemon to allow previous layouts capability
+    0001-Rejig-budgie-extras-daemon-to-just-support-layouts.patch
 
- -- David Mohammed <fossfreedom@ubuntu.com>  Mon, 10 Nov 2025 19:22:12 +0000
+ -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 17 Feb 2026 18:59:33 +0000
 
 budgie-extras (1.9.0-1) unstable; urgency=medium
 

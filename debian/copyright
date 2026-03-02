@@ -4,12 +4,12 @@ Upstream-Contact: David Mohammed <fossfreedom@ubuntu.com>
 Source: https://github.com/ubuntubudgie/budgie-extras
 
 Files: *
-Copyright: 2017-2022, Ubuntu Budgie Developers
+Copyright: 2017-2026, Ubuntu Budgie Developers
 License: GPL-3+
 
 Files: budgie-wallstreet/data/org.ubuntubudgie.wallstreetcontrol.metainfo.xml.in
  *.metainfo.xml
-Copyright: 2022-2025, Ubuntu Budgie Developers
+Copyright: 2022-2026, Ubuntu Budgie Developers
 License: FSFAP
  Copying and distribution of this file, with or without modification,
  are permitted in any medium without royalty provided the copyright
@@ -70,7 +70,7 @@ License: CC-BY-4.0
       such as asking that all changes be marked or described.
       Although not required by our licenses, you are encouraged to
       respect those requests where reasonable. More_considerations
-      for the public: 
+      for the public:
     wiki.creativecommons.org/Considerations_for_licensees
  .
  =======================================================================
@@ -706,7 +706,7 @@ License: CC-BY-3.0
     applicable law.
 
 Files: debian/*
-Copyright: 2017-2022, David Mohammed <fossfreedom@ubuntu.com>
+Copyright: 2017-2026, David Mohammed <fossfreedom@ubuntu.com>
 License: GPL-2+
 
 Files: budgie-applications-menu/applications-menu/*
