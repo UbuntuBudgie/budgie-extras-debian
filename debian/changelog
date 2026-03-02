@@ -1,3 +1,23 @@
+budgie-extras (2.1.0-0ubuntu2) resolute; urgency=medium
+
+  * Reinstantiate budgie-extras-daemon to allow previous layouts capability
+    0001-Rejig-budgie-extras-daemon-to-just-support-layouts.patch
+  * d/control change budgie-extras-daemon transitional package back
+    to the Questing binary
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Sun, 08 Feb 2026 19:44:37 +0000
+
+budgie-extras (2.1.0-0ubuntu1) resolute; urgency=medium
+
+  * Stable release
+    - wayland compatibility for more applets
+  * Use multiarch location for installs
+  * Transition package for showtime and workspace-wallpaper applets
+    These now install their widget equivalents - i.e.
+    budgie-showtime-widget and budgieworkspace-wallpaper-widget
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Thu, 29 Jan 2026 21:16:18 +0000
+
 budgie-extras (2.0.0-0ubuntu1) resolute; urgency=medium
 
   * Stable release

@@ -1,0 +1,5 @@
+etc/xdg/autostart/budgie-extras-daemon.desktop
+usr/bin/budgie-extras-daemon
+usr/lib/*/budgie-extras-daemon/invoke.py
+usr/share/budgie-desktop/layouts
+usr/share/man/man1/budgie-extras-daemon*

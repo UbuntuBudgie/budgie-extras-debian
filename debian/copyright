@@ -756,10 +756,6 @@ Copyright: 2014, Corentin Noël <tintou@mailoo.org>
   2011, 2012, Giulio Collura
 License: GPL-3+
 
-Files: budgie-applications-menu/applications-menu/src/powerstrip.vala
-Copyright: 2019, Ubuntu Budgie Developers
-License: GPL-2+
-
 Files: budgie-applications-menu/applications-menu/src/synapse-core/*
 Copyright: 2010, Michal Hruby <michal.mhr@gmail.com>
 License: GPL-2+
