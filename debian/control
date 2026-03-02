@@ -382,6 +382,18 @@ Description: Applet to display the weather and forecast
  The weathershow applet displays daily and three hourly weather
  forecasts on both the desktop and a Popover.
 
+Package: budgie-screencast-applet
+Architecture: any
+Depends: wf-recorder, pulseaudio-utils, slurp, ${misc:Depends}, ${shlibs:Depends},
+Description: Applet to record the whole or parts of a screen
+ This is part of a suite of Vala based applets for the Budgie
+ Desktop that provide additional user orientated capabilities.
+ The applets can be used individually or as a set.
+ .
+ The screencast applet allows both areas and whole screen video recording together
+ with optional audio.  It allows for unlimited recording as well as time-limited
+ recording times plus optional delays in recording.
+
 Package: budgie-window-shuffler
 Architecture: all
 Section: oldlibs

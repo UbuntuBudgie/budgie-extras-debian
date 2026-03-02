@@ -1,6 +1,9 @@
-budgie-extras (2.2.0-1) UNRELEASED; urgency=medium
+budgie-extras (2.2.0-1) experimental; urgency=medium
 
   * New upstream release
+    - Add budgie-screencast-applet
+  * Packaging Changes:
+    d/control add budgie-screencast-applet packaging
 
  -- David Mohammed <fossfreedom@ubuntu.com>  Mon, 02 Mar 2026 19:00:57 +0000
 
