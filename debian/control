@@ -26,7 +26,6 @@ Build-Depends:
  libnma-dev,
  libnotify-dev,
  libpeas-2-dev,
- libplank-dev,
  libsoup-3.0-dev,
  libxfce4windowing-0-dev,
  meson,

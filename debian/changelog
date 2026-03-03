@@ -6,6 +6,7 @@ budgie-extras (2.2.0-0ubuntu1) resolute; urgency=medium
       release
   * Packaging Changes:
     d/control add budgie-screencast-applet packaging
+      drop libplank-dev
     wrap-and-sort -bst
     add news.patch to fix appstream validation errors
 
