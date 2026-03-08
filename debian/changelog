@@ -8,7 +8,6 @@ budgie-extras (2.2.1-1) experimental; urgency=medium
     d/control add budgie-screencast-applet packaging
      drop libplank-dev
     wrap-and-sort -bst
-    add news.patch to fix appstream validation errors
 
  -- David Mohammed <fossfreedom@ubuntu.com>  Sun, 08 Mar 2026 20:42:42 +0000
 
