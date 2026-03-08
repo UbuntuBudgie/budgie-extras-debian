@@ -1,4 +1,4 @@
-budgie-extras (2.2.1-1) unstable; urgency=medium
+budgie-extras (2.2.1-1) experimental; urgency=medium
 
   * New upstream release
     - Add budgie-screencast-applet (LP: #2143082)
@@ -6,19 +6,9 @@ budgie-extras (2.2.1-1) unstable; urgency=medium
       release
     - Remove budgie-trash source since it is obsolete and the Apache-2 license
       conflicts with GPL-2
-  * Packaging Changes:
-    d/control add budgie-screencast-applet packaging
-     drop libplank-dev
-    wrap-and-sort -bst
-
- -- David Mohammed <fossfreedom@ubuntu.com>  Sun, 08 Mar 2026 20:42:42 +0000
-
-budgie-extras (2.1.0-1) experimental; urgency=medium
-
-  * Stable release
     - wayland compatibility for various applets
     - for X11 applets these become transitional packages
-    - hotcorners has become a transitional package (closes #1092933)
+    - hotcorners has become a transitional package (Closes: #1092933)
   * switch to budgie gir 3.0 and remove debhelper, libbudgie-plugin0
     (Closes: #1120138)
   * Build with peas-2
@@ -27,13 +17,16 @@ budgie-extras (2.1.0-1) experimental; urgency=medium
   * add libgtk-layer-shell-dev
   * d/control switch Vcs to budgie-extras-debian with gbp buildpackage
     compatibility
+  * d/control remove obsolete Requires-Root and Priority statements
   * Transition package for showtime and workspace-wallpaper applets
     These now install their widget equivalents - i.e.
     budgie-showtime-widget and budgieworkspace-wallpaper-widget
-  * Reinstantiate budgie-extras-daemon to allow previous layouts capability
-    0001-Rejig-budgie-extras-daemon-to-just-support-layouts.patch
+  * Packaging Changes:
+    d/control add budgie-screencast-applet packaging
+     drop libplank-dev
+    wrap-and-sort -bst
 
- -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 17 Feb 2026 18:59:33 +0000
+ -- David Mohammed <fossfreedom@ubuntu.com>  Sun, 08 Mar 2026 20:42:42 +0000
 
 budgie-extras (1.9.0-1) unstable; urgency=medium
 
