@@ -1,9 +1,11 @@
-budgie-extras (2.2.1-1) experimental; urgency=medium
+budgie-extras (2.2.1-1) unstable; urgency=medium
 
   * New upstream release
     - Add budgie-screencast-applet (LP: #2143082)
     - drop all previous patch since it has been incorporated in this
       release
+    - Remove budgie-trash source since it is obsolete and the Apache-2 license
+      conflicts with GPL-2
   * Packaging Changes:
     d/control add budgie-screencast-applet packaging
      drop libplank-dev

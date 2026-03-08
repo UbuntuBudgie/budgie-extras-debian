@@ -140,6 +140,25 @@ Copyright: 2017-2026, Ubuntu Budgie Developers
 License: GPL-3
 
 Files: budgie-wallstreet/data/org.ubuntubudgie.wallstreetcontrol.metainfo.xml.in
+ budgie-app-launcher/data/org.ubuntubudgie.applauncher.metainfo.xml
+ budgie-brightness-controller/data/org.ubuntubudgie.brightnesscontroller.metainfo.xml
+ budgie-clockworks/data/org.ubuntubudgie.clockworks.metainfo.xml
+ budgie-countdown/data/org.ubuntubudgie.countdown.metainfo.xml
+ budgie-dropby/src-wayland/data/org.ubuntubudgie.dropby.metainfo.xml
+ budgie-dropby/src-x11/data/org.ubuntubudgie.dropby.metainfo.xml
+ budgie-fuzzyclock/data/org.ubuntubudgie.fuzzyclock.metainfo.xml
+ budgie-hotcorners/misc/org.ubuntubudgie.hotcorners.metainfo.xml
+ budgie-kangaroo/data/org.ubuntubudgie.kangaroo.metainfo.xml
+ budgie-keyboard-autoswitch/data/org.ubuntubudgie.keyboardautoswitch.metainfo.xml
+ budgie-quicknote/data/org.ubuntubudgie.quicknote.metainfo.xml
+ budgie-recentlyused/data/org.ubuntubudgie.recentlyused.metainfo.xml
+ budgie-rotation-lock/data/org.ubuntubudgie.rotationlock.metainfo.xml
+ budgie-showtime/data/org.ubuntubudgie.showtime.metainfo.xml
+ budgie-takeabreak/data/org.ubuntubudgie.takeabreak.metainfo.xml
+ budgie-visualspace/data/org.ubuntubudgie.visualspace.metainfo.xml
+ budgie-weathershow/data/org.ubuntubudgie.weathershow.metainfo.xml
+ budgie-workspace-stopwatch/data/org.ubuntubudgie.workspacestopwatch.metainfo.xml
+ budgie-wswitcher/data/org.ubuntubudgie.wswitcher.metainfo.xml
 Copyright: 2022-2026, Ubuntu Budgie Developers
 License: FSFAP
  Copying and distribution of this file, with or without modification,
@@ -152,6 +171,7 @@ Copyright: 2017-2026, David Mohammed <fossfreedom@ubuntu.com>
 License: GPL-2+
 
 Files: budgie-weathershow/weather_icons/*
+Copyright: 2022-2026, Ubuntu Budgie Developers
 License: Expat
  The MIT License
  .
