@@ -1,4 +1,4 @@
-budgie-extras (2.2.0-1) experimental; urgency=medium
+budgie-extras (2.2.0-1) UNRELEASED; urgency=medium
 
   * New upstream release
     - Add budgie-screencast-applet
@@ -18,7 +18,7 @@ budgie-extras (2.1.0-1) experimental; urgency=medium
     - for X11 applets these become transitional packages
     - hotcorners has become a transitional package (closes #1092933)
   * switch to budgie gir 3.0 and remove debhelper, libbudgie-plugin0
-    (closes #1120138)
+    (Closes: #1120138)
   * Build with peas-2
   * Use multiarch location for installs not hard-coded paths
   * remove conffiles via package.conffiles with remove-on-upgrade
