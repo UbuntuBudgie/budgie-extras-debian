@@ -30,6 +30,13 @@ Files: budgie-applications-menu/applications-menu/src/Backend/SynapseSearch.vala
 Copyright: 2011, 2012, Giulio Collura
 License: GPL-3+
 
+Files: budgie-applications-menu/applications-menu/src/Backend/FavoritesManager.vala
+ budgie-applications-menu/applications-menu/src/Backend/SessionManager.vala
+ budgie-applications-menu/applications-menu/src/Widgets/FavoritesSidebar.vala
+ budgie-applications-menu/applications-menu/src/Widgets/powerstrip.vala
+Copyright: 2017-2019, Ubuntu Budgie Developers
+License: GPL-2+
+
 Files: budgie-applications-menu/applications-menu/src/IconChooser.vala
 Copyright: 2017-2019, Budgie Desktop Developers
 License: GPL-2+
