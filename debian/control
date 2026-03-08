@@ -3,11 +3,11 @@ Section: misc
 Priority: optional
 Maintainer: David Mohammed <fossfreedom@ubuntu.com>
 Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
  appstream,
  budgie-core-dev,
  cmake,
- debhelper-compat (= 13),
- dh-python,
  gnome-settings-daemon-dev,
  gobject-introspection,
  intltool,
@@ -26,7 +26,6 @@ Build-Depends:
  libnma-dev,
  libnotify-dev,
  libpeas-2-dev,
- libplank-dev,
  libsoup-3.0-dev,
  libxfce4windowing-0-dev,
  meson,

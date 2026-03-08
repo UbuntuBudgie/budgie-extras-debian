@@ -1,11 +1,12 @@
 budgie-extras (2.2.0-1) experimental; urgency=medium
 
   * New upstream release
-    - Add budgie-screencast-applet
+    - Add budgie-screencast-applet (LP: #2143082)
     - drop all previous patch since it has been incorporated in this
       release
   * Packaging Changes:
     d/control add budgie-screencast-applet packaging
+     drop libplank-dev
     wrap-and-sort -bst
     add news.patch to fix appstream validation errors
 
