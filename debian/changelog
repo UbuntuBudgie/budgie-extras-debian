@@ -37,22 +37,25 @@ budgie-extras (2.0.0-0ubuntu1) resolute; urgency=medium
   * Stable release
     - wayland compatibility for various applets (LP: #2132292)
     - for X11 applets these become transitional packages
-    - hotcorners has become a transitional package (closes #1092933)
+    - hotcorners has become a transitional package (Closes: #1092933)
   * switch to budgie gir 3.0 and remove debhelper, libbudgie-plugin0
-    (closes #1120138)
+    (Closes: #1120138)
   * Build with peas-2
   * Use multiarch location for installs not hard-coded paths
   * remove conffiles via package.conffiles with remove-on-upgrade
   * add libgtk-layer-shell-dev
   * d/control switch Vcs to budgie-extras-debian with gbp buildpackage
     compatibility
+  * d/control remove obsolete Requires-Root and Priority statements
   * Transition package for showtime and workspace-wallpaper applets
     These now install their widget equivalents - i.e.
     budgie-showtime-widget and budgieworkspace-wallpaper-widget
-  * Reinstantiate budgie-extras-daemon to allow previous layouts capability
-    0001-Rejig-budgie-extras-daemon-to-just-support-layouts.patch
+  * Packaging Changes:
+    d/control add budgie-screencast-applet packaging
+     drop libplank-dev
+    wrap-and-sort -bst
 
- -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 17 Feb 2026 18:59:33 +0000
+ -- David Mohammed <fossfreedom@ubuntu.com>  Sun, 08 Mar 2026 20:42:42 +0000
 
 budgie-extras (1.9.0-1) unstable; urgency=medium
 
