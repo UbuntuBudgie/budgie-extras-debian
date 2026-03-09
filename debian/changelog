@@ -1,3 +1,12 @@
+budgie-extras (2.2.1-0ubuntu1) resolute; urgency=medium
+
+  * New upstream release
+    - Fix sidebar popups to work with the latest labwc and other wlroots
+      compositors
+    - latest translations
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Mon, 09 Mar 2026 21:42:46 +0000
+
 budgie-extras (2.2.0-0ubuntu1) resolute; urgency=medium
 
   * New upstream release
