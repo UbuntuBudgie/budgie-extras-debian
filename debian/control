@@ -6,7 +6,7 @@ Build-Depends:
  debhelper-compat (= 13),
  dh-python,
  appstream,
- budgie-core-dev,
+ budgie-core-dev (>= 10.10),
  cmake,
  gnome-settings-daemon-dev,
  gobject-introspection,
