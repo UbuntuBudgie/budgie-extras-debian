@@ -1,6 +1,8 @@
-budgie-extras (2.2.2-1) UNRELEASED; urgency=medium
+budgie-extras (2.2.2-1) resolute; urgency=medium
 
   * New upstream release
+    - fix dropover display due to python missing an import
+    - latest translations
 
  -- David Mohammed <fossfreedom@ubuntu.com>  Fri, 20 Mar 2026 09:24:45 +0000
 
