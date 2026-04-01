@@ -1,16 +1,12 @@
-budgie-extras (2.2.2-1) UNRELEASED; urgency=medium
+budgie-extras (2.2.2-1) unstable; urgency=medium
 
   * New upstream release
-
- -- David Mohammed <fossfreedom@ubuntu.com>  Wed, 01 Apr 2026 15:58:53 +0100
-
-budgie-extras (2.2.1-2) unstable; urgency=medium
-
+    - bug fix for dropover to enable starting; code syntax error
   * Upload to unstable since all budgie components have now been assembled
   * Fix runtime dependencies for dropby since these are X11 based - should
     be wayland only
 
- -- David Mohammed <fossfreedom@ubuntu.com>  Wed, 01 Apr 2026 15:45:49 +0100
+ -- David Mohammed <fossfreedom@ubuntu.com>  Wed, 01 Apr 2026 15:58:53 +0100
 
 budgie-extras (2.2.1-1) experimental; urgency=medium
 
