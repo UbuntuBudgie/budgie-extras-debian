@@ -1,4 +1,4 @@
-budgie-extras (2.2.2-1) resolute; urgency=medium
+budgie-extras (2.2.2-0ubuntu1) resolute; urgency=medium
 
   * New upstream release
     - fix dropover display due to python missing an import
