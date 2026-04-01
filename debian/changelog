@@ -1,3 +1,11 @@
+budgie-extras (2.2.1-2) unstable; urgency=medium
+
+  * Upload to unstable since all budgie components have now been assembled
+  * Fix runtime dependencies for dropby since these are X11 based - should
+    be wayland only
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Wed, 01 Apr 2026 15:45:49 +0100
+
 budgie-extras (2.2.1-1) experimental; urgency=medium
 
   * New upstream release

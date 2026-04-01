@@ -141,18 +141,16 @@ Description: Applet providing a countdown capability on the Budgie Desktop
 Package: budgie-dropby-applet
 Architecture: any
 Depends:
- gir1.2-budgie-1.0,
+ gir1.2-budgie-3.0,
  gir1.2-glib-2.0,
  gir1.2-gtk-3.0,
- gir1.2-peas-1.0,
- gir1.2-wnck-3.0,
+ gir1.2-peas-2,
  libnotify-bin,
  python3,
  python3-gi,
  python3-psutil,
  python3-pyudev,
  util-linux (>= 2.31.1),
- wmctrl,
  zenity,
  ${misc:Depends},
  ${python3:Depends},
