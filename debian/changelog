@@ -1,3 +1,10 @@
+budgie-extras (2.2.3-2) unstable; urgency=medium
+
+  * Fix panel crash with dropby applet; missing python runtime
+    dependencies - xfce4windowing and gtklayershell
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Mon, 13 Apr 2026 17:08:38 +0100
+
 budgie-extras (2.2.3-1) unstable; urgency=medium
 
   * New upstream release

@@ -144,6 +144,8 @@ Depends:
  gir1.2-budgie-3.0,
  gir1.2-glib-2.0,
  gir1.2-gtk-3.0,
+ gir1.2-gtklayershell-0.1,
+ gir1.2-libxfce4windowing-0.0,
  gir1.2-peas-2,
  libnotify-bin,
  python3,
