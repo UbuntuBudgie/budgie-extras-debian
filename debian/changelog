@@ -1,3 +1,12 @@
+budgie-extras (2.2.3-3) unstable; urgency=medium
+
+  * Bug-fix
+    Fix hiding/showing of crystal-dock for traditional and redmond
+    layouts (LP: #2163018)
+    0001-Ensure-we-deal-with-crystal-dock-autostarting-when-u.patch
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Sat, 08 Aug 2026 10:13:13 +0100
+
 budgie-extras (2.2.3-2) unstable; urgency=medium
 
   * Fix panel crash with dropby applet; missing python runtime
