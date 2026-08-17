@@ -199,7 +199,7 @@ namespace WeatherShowApplet {
     private bool dynamic_icon;
     private bool show_forecast;
     private string lang;
-    private string tempunit;
+    private string tempunit; /* one of: "ms" "mph" "kmh" "knots" "beaufort" */
     private string windunit;
     private string[] directions;
     private string key;
@@ -610,27 +610,50 @@ namespace WeatherShowApplet {
             }
         }
 
-        private string get_windspeed (
-            HashMap<string, Json.Object> categories
-            ) {
-                /* get wind speed */
-                float wspeed = check_numvalue(categories["wind"], "speed");
-                string wspeeddisplay;
-                if (wspeed != 1000) {
-                    if (windunit == "Miles") {
-                        wspeed = wspeed * (float) 2.237;
-                        double rounded_wspeed = Math.round((double) wspeed);
-                        wspeeddisplay = rounded_wspeed.to_string().concat(" MPH");
-                    }
-                    else {
-                        wspeeddisplay = wspeed.to_string().concat(" m/sec");
-                    }
-                }
-                else {
-                    wspeeddisplay = "";
-                }
-                return wspeeddisplay;
+        private string get_windspeed ( HashMap<string, Json.Object> categories ) {
+                /* OWM always delivers speed in m/s; sentinel 1000 == missing */
+                float raw = check_numvalue(categories["wind"], "speed");
+                return format_windspeed(raw);
+             }
+
+        private string format_windspeed (float raw_ms) {
+            /* Sentinel value from check_numvalue when the field is absent */
+            if (raw_ms >= 1000f || raw_ms < 0f || raw_ms != raw_ms) {
+                return "";
             }
+            double v = (double) raw_ms;
+            switch (windunit) {
+                case "mph":
+                    double mph = v * 2.23694;
+                    return "%.1f mph".printf(mph);
+
+                case "kmh":
+                    double kmh = v * 3.6;
+                    return "%.1f km/h".printf(kmh);
+
+                case "knots":
+                    double kn = v * 1.94384;
+                    return "%.1f kn".printf(kn);
+
+                case "beaufort":
+                    return "%d Bft".printf(ms_to_beaufort(v));
+
+                default: /* "ms" and any unrecognised legacy value */
+                    return "%.1f m/s".printf(v);
+            }
+        }
+
+        private int ms_to_beaufort (double ms) {
+            /* Beaufort scale thresholds (upper bound in m/s, exclusive) */
+            double[] bounds = {
+                0.5, 1.6, 3.4, 5.5, 8.0, 10.8,
+                13.9, 17.2, 20.8, 24.5, 28.5, 32.7
+            };
+            for (int b = 0; b < bounds.length; b++) {
+                if (ms < bounds[b]) return b;
+            }
+            return 12;
+        }
 
         private string get_temperature(
             HashMap<string, Json.Object> categories
@@ -775,6 +798,7 @@ namespace WeatherShowApplet {
         private Gtk.CheckButton setposbutton;
         private Gtk.Entry xpos;
         private Gtk.Entry ypos;
+        private Gtk.Button choose_pos_button;
         private Gtk.Label xpos_label;
         private Gtk.Label ypos_label;
         private Gtk.Button apply;
@@ -889,11 +913,22 @@ namespace WeatherShowApplet {
             subgrid_general.attach(tempunit_checkbox, 0, 14, 1, 1);
             tempunit_checkbox.set_active(get_tempstate());
             tempunit_checkbox.toggled.connect(set_tempunit);
-            // wind unit
-            var windunit_checkbox = new CheckButton.with_label("Wind speed in MPH");
-            subgrid_general.attach(windunit_checkbox, 0, 15, 1, 1);
-            windunit_checkbox.set_active(get_windstate());
-            windunit_checkbox.toggled.connect(set_windunit);
+
+            /* wind unit combo */
+            var windunit_label = new Gtk.Label((_("Wind speed unit")));
+            windunit_label.set_xalign(0);
+            subgrid_general.attach(windunit_label, 0, 15, 1, 1);
+
+            var windunit_combo = new Gtk.ComboBoxText();
+            windunit_combo.append("ms",      "m/s");
+            windunit_combo.append("mph",     "mph");
+            windunit_combo.append("kmh",     "km/h");
+            windunit_combo.append("knots",   "Knots");
+            windunit_combo.append("beaufort","Beaufort");
+            windunit_combo.set_active_id(windunit);
+            windunit_combo.changed.connect(on_windunit_combo_changed);
+            subgrid_general.attach(windunit_combo, 0, 16, 1, 1);
+
             var spacelabel5 = new Gtk.Label("");
             subgrid_general.attach(spacelabel5, 0, 17, 1, 1);
             // optional settings: show on desktop
@@ -950,6 +985,9 @@ namespace WeatherShowApplet {
             apply = new Gtk.Button.with_label("OK");
             apply.clicked.connect(update_xysetting);
             posholder.pack_end(apply, false, false, 0);
+            choose_pos_button = new Gtk.Button.with_label(_("Choose visually…"));
+            choose_pos_button.clicked.connect(show_position_picker);
+            posholder.pack_end(choose_pos_button, false, false, 0);
             subgrid_desktop.attach(posholder, 0, 51, 1, 1);
             var spacelabel8 = new Gtk.Label("\n");
             customcity_checkbox = new Gtk.CheckButton.with_label(
@@ -1019,6 +1057,7 @@ namespace WeatherShowApplet {
             apply.set_sensitive(currcustom);
             xpos_label.set_sensitive(currcustom);
             ypos_label.set_sensitive(currcustom);
+            choose_pos_button.set_sensitive(currcustom);
         }
 
         private void set_initialcustom () {
@@ -1028,6 +1067,20 @@ namespace WeatherShowApplet {
             customcity_entry.set_sensitive(use_custom_cityname);
             customcity_entry.set_text(customcityname);
             apply_cityname.set_sensitive(use_custom_cityname);
+        }
+
+        private void show_position_picker (Button button) {
+            var picker = new WeatherShowPositionPicker(ws_settings);
+            picker.set_transient_for(this.get_toplevel() as Gtk.Window);
+
+            picker.position_selected.connect((x, y) => {
+                ws_settings.set_int("xposition", x);
+                ws_settings.set_int("yposition", y);
+                xpos.set_text(x.to_string());
+                ypos.set_text(y.to_string());
+            });
+
+            picker.show();
         }
 
         private void update_xysetting (Button button) {
@@ -1166,12 +1219,6 @@ namespace WeatherShowApplet {
             );
         }
 
-        private bool get_windstate () {
-            return (
-                windunit == "Miles"
-            );
-        }
-
         private void set_tempunit (ToggleButton button) {
             // update gsettings
             bool newsetting = button.get_active();
@@ -1185,17 +1232,12 @@ namespace WeatherShowApplet {
             ws_settings.set_string("tempunit", tempunit);
         }
 
-        private void set_windunit (ToggleButton button) {
-            // update gsettings
-            bool newsetting = button.get_active();
-            if (newsetting == true) {
-                windunit = "Miles";
-            }
-            else {
-                windunit = "Meters";
-            }
-            update_weathershow();
+        private void on_windunit_combo_changed (Gtk.ComboBox combo) {
+            string? newid = (combo as Gtk.ComboBoxText).get_active_id();
+            if (newid == null) return;
+            windunit = newid;
             ws_settings.set_string("windunit", windunit);
+            update_weathershow();
         }
 
         private void toggle_value(ToggleButton button) {
@@ -1224,6 +1266,7 @@ namespace WeatherShowApplet {
                 xpos.set_sensitive(newsetting);
                 ypos.set_sensitive(newsetting);
                 apply.set_sensitive(newsetting);
+                choose_pos_button.set_sensitive(newsetting);
                 if (newsetting == false) {
                     xpos.set_text("");
                     ypos.set_text("");
