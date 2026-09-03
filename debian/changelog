@@ -1,3 +1,12 @@
+budgie-extras (2.3.0-3) unstable; urgency=medium
+
+  * Bug-fix
+    Improve icon loading further by removing granite deprecation
+    of its async method
+    0001-Remove-deprecated-granite-async-load-method-appears-.patch
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Thu, 03 Sep 2026 22:50:52 +0100
+
 budgie-extras (2.3.0-2) unstable; urgency=medium
 
   * Bug-fix
