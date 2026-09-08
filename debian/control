@@ -19,7 +19,7 @@ Build-Depends:
  libgranite-dev,
  libgtk-3-dev,
  libgtk-layer-shell-dev,
- libhandy-1-dev,
+ libhandy-dev,
  libjson-glib-dev,
  libkeybinder-3.0-dev,
  libnm-dev,

@@ -1,3 +1,11 @@
+budgie-extras (2.3.0-4) unstable; urgency=medium
+
+  * Bug-fix
+    d/control - switch from libhandy-1-dev to libhandy-dev
+    (Closes: #1146858)
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 08 Sep 2026 22:40:49 +0100
+
 budgie-extras (2.3.0-3) unstable; urgency=medium
 
   * Bug-fix
