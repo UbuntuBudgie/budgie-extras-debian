@@ -1,6 +1,7 @@
-budgie-extras (2.3.1-1) UNRELEASED; urgency=medium
+budgie-extras (2.3.1-1) unstable; urgency=medium
 
   * New upstream release
+  * drop existing patches since these have been incorporated in this release
 
  -- David Mohammed <fossfreedom@ubuntu.com>  Thu, 01 Oct 2026 21:48:01 +0100
 
