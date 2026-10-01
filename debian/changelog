@@ -1,3 +1,9 @@
+budgie-extras (2.3.1-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Thu, 01 Oct 2026 21:48:01 +0100
+
 budgie-extras (2.3.0-4) unstable; urgency=medium
 
   * Bug-fix
