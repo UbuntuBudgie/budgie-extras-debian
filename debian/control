@@ -298,9 +298,10 @@ Architecture: any
 Depends:
  pulseaudio-utils,
  slurp,
- wf-recorder,
  ${misc:Depends},
  ${shlibs:Depends},
+Recommends:
+ wf-recorder | gpu-screen-recorder-cli 
 Description: Applet to record the whole or parts of a screen
  This is part of a suite of Vala based applets for the Budgie
  Desktop that provide additional user orientated capabilities.

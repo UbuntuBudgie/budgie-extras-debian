@@ -1,3 +1,13 @@
+budgie-extras (2.3.1-2) unstable; urgency=medium
+
+  * for screencast, add alternate recorder (gpu-screen-recorder-cli)
+    method to provide a choice of what to use
+    0001-Add-support-for-gpu-screen-recorder-if-wf-recorder-i.patch
+  * d/control switch wf-recorder to a recommendation and add
+    gpu-screen-recorder-cli as an alternate
+
+ -- David Mohammed <fossfreedom@ubuntu.com>  Tue, 13 Oct 2026 21:22:51 +0100
+
 budgie-extras (2.3.1-1) unstable; urgency=medium
 
   * New upstream release
